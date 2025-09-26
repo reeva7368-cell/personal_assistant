@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pushpa — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Portfolio of Pushpa — designer, developer & presenter" />
+  <style>
+    :root{
+      --accent:#6C5CE7;
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.03);
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background:linear-gradient(180deg,#071021 0%, #071827 60%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      padding:2rem;
+      display:flex;
+      justify-content:center;
+    }
+    .container{
+      width:100%;
+      max-width:980px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:14px;
+      padding:28px;
+      box-shadow:0 10px 30px rgba(2,6,23,0.6);
+      backdrop-filter: blur(6px);
+    }
+    header{display:flex;gap:16px;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:16px;align-items:center}
+    .avatar{
+      width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#00b3ff);
+      display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;color:white
+    }
+    h1{margin:0;font-size:1.6rem}
+    p.lead{margin:4px 0 0;color:var(--muted)}
+
+    .nav{display:flex;gap:12px}
+    .nav a{color:var(--muted);text-decoration:none;font-weight:600;padding:8px 12px;border-radius:8px}
+    .nav a:hover{color:white;background:rgba(255,255,255,0.02)}
+
+    main{display:grid;grid-template-columns:1fr 340px;gap:20px;margin-top:22px}
+    .card{background:var(--card);padding:18px;border-radius:12px}
+    .hero{padding:22px;border-radius:12px;background:linear-gradient(180deg, rgba(108,92,231,0.06), transparent)}
+    .cta{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;font-weight:700}
+
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .skill{background:var(--glass);padding:6px 10px;border-radius:999px;font-weight:600;color:var(--muted);font-size:0.9rem}
+
+    .projects{display:grid;gap:12px}
+    .project{display:flex;gap:12px;align-items:center}
+    .thumb{width:84px;height:60px;border-radius:8px;background:linear-gradient(135deg,#14202b,#0e1620);display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:700}
+
+    .contact input,.contact textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    .contact label{font-size:0.85rem;color:var(--muted)}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:inherit;font-weight:700;text-decoration:none}
+
+    footer{display:flex;justify-content:space-between;align-items:center;margin-top:18px;color:var(--muted);font-size:0.9rem}
+
+    /* responsive */
+    @media (max-width:900px){main{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <div class="brand">
+        <div class="avatar">P</div>
+        <div>
+          <h1>Pushpa</h1>
+          <p class="lead">Presenter • Designer • Web Developer</p>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <div class="card hero" id="about">
+          <h2 style="margin-top:0">Hi — I'm Pushpa 👋</h2>
+          <p class="lead">I create accessible and elegant web experiences. I love anchoring events, dancing, and turning complex ideas into simple, memorable moments.</p>
+          <div class="skills" aria-hidden="false">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Responsive Design</div>
+            <div class="skill">Public Speaking</div>
+          </div>
+          <a class="cta" href="#projects">See my work</a>
+        </div>
+
+        <div class="card" style="margin-top:14px" id="projects">
+          <h3 style="margin-top:0">Selected projects</h3>
+          <div class="projects">
+            <article class="project">
+              <div class="thumb">Event</div>
+              <div>
+                <strong>Seminar Anchoring Kit</strong>
+                <div style="color:var(--muted);font-size:0.95rem">A reusable script & flow for academic events — concise, engaging.</div>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="thumb">PDF</div>
+              <div>
+                <strong>Code + Output PDF Builder</strong>
+                <div style="color:var(--muted);font-size:0.95rem">Generates neatly formatted PDFs with code blocks and outputs for study materials.</div>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="thumb">Site</div>
+              <div>
+                <strong>Portfolio Template</strong>
+                <div style="color:var(--muted);font-size:0.95rem">A clean, responsive single-file portfolio (this page!).</div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <h3 style="margin-top:0">Experience & education</h3>
+          <ul style="margin:8px 0 0;padding-left:18px;color:var(--muted)">
+            <li>Event anchor — 3+ years (college & community events)</li>
+            <li>Front-end projects — personal & academic</li>
+            <li>Bachelor's degree (your major here)</li>
+          </ul>
+        </div>
+      </section>
+
+      <aside>
+        <div class="card">
+          <h3 style="margin-top:0">Contact</h3>
+          <p class="lead">Let's work together — or say hi!</p>
+          <div style="margin-top:8px">
+            <p style="margin:6px 0"><strong>Email</strong><br><a class="btn" href="mailto:pushpa@example.com">pushpa@example.com</a></p>
+            <p style="margin:6px 0"><strong>Resume</strong><br><a class="btn" href="#" download>Download</a></p>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px" id="contact">
+          <h3 style="margin-top:0">Send a message</h3>
+          <form class="contact" onsubmit="handleSubmit(event)">
+            <label for="name">Name</label>
+            <input id="name" name="name" placeholder="Your name" required />
+            <label for="message" style="margin-top:10px">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Write a short message" required></textarea>
+            <div style="margin-top:10px;display:flex;gap:8px">
+              <button class="btn" type="button" onclick="copyEmail()">Copy email</button>
+              <button class="cta" type="submit">Send</button>
+            </div>
+            <p id="formStatus" style="margin-top:8px;color:var(--muted);font-size:0.9rem"></p>
+          </form>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <h3 style="margin-top:0">Social</h3>
+          <p style="margin:6px 0;color:var(--muted)">Find me on:</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <a class="btn" href="#" aria-label="LinkedIn">LinkedIn</a>
+            <a class="btn" href="#" aria-label="GitHub">GitHub</a>
+            <a class="btn" href="#" aria-label="Instagram">Instagram</a>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Pushpa</div>
+      <div style="color:var(--muted)">Made with ❤️ — simple, accessible & responsive</div>
+    </footer>
+  </div>
+
+  <script>
+    // small interactive helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function copyEmail(){
+      navigator.clipboard?.writeText('pushpa@example.com')
+        .then(()=>alert('Email copied to clipboard'))
+        .catch(()=>alert('Copy not supported'))
+    }
+
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const status = document.getElementById('formStatus');
+      if(!name || !message){ status.textContent = 'Please fill both fields.'; return }
+      // This demo does not send data to a server. Replace with your endpoint or use mailto as fallback.
+      status.textContent = 'Thanks, ' + name + '! Your message preview:\n' + message.slice(0,120);
+      setTimeout(()=>{status.textContent='Message preview saved locally only.'},3000);
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
